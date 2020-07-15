@@ -13,5 +13,15 @@ final class EmployeeTest extends TestCase
             $employee
         );
     }
+
+    public function testGetFullNameOfEmployeeShouldReturnFirstNameAndLastName(): void
+    {
+        $employee = new Employee('Tata', 'Tonton', 'c@gmail.com');
+        $this->assertEquals(
+            'Tata Tonton',
+            $employee->getFullName()
+        );
+        
+    }
 }
 

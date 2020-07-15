@@ -24,4 +24,8 @@ final class Employee
     public function getEmail(): Email {
         return $this->email;
     }
+
+    public function getFullName(): string {
+        return $this->firstName . ' ' . $this->lastName;
+    }
 }
