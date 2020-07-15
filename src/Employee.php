@@ -27,11 +27,15 @@ final class Employee
         return $this->email;
     }
 
-    public function getGrossMonthlySalary(): int {
+    public function getGrossMonthlySalary(): float {
         return $this->grossMonthlySalary;
     }
 
     public function getFullName(): string {
         return $this->firstName . ' ' . $this->lastName;
+    }
+
+    public function getNetMonthlySalary(): float {
+        return $this->grossMonthlySalary * 55/100;
     }
 }

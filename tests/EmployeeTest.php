@@ -31,5 +31,14 @@ final class EmployeeTest extends TestCase
             $employee->getGrossMonthlySalary()
         );
     }
+
+    public function testGetNetMonthlySalaryOfEmployeeShouldReturnTheNetSalary(): void
+    {
+        $employee = new Employee('Tata', 'Tonton', 'c@gmail.com', 123);
+        $this->assertEquals(
+            67.65,
+            $employee->getNetMonthlySalary()
+        );
+    }
 }
 
