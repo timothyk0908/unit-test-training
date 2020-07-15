@@ -36,6 +36,6 @@ final class Employee
     }
 
     public function getNetMonthlySalary(): float {
-        return $this->grossMonthlySalary * 55/100;
+        return Salary::calculateNetSalary($this->grossMonthlySalary);
     }
 }
